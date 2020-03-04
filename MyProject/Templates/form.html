@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+         {% block title %}
+         Title
+         {% endblock %}
+      </title>
+      <link rel="stylesheet" href="../form_styles.css">
+      <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
+   <body>
+      <header>
+         <div class="header__logo">
+            <p>resume</p>
+         </div>
+         <nav>
+            <div class="topnav" id="myTopnav">
+               <a href="#">ГЛАВНАЯ</a>
+               <a href="#">О НАС</a>
+               <a href="#">ОБРАЗЦЫ РЕЗЮМЕ</a>
+               <a href="#">ИСТОРИЯ</a>
+               <a href="#">СОСТАВИТЬ РЕЗЮМЕ</a>
+               <a href="#">ВХОД</a>
+               <a href="#">РЕГИСТРАЦИЯ</a>
+               <a href="#" id="menu" class= "icon">&#9776;</a>
+            </div>
+         </nav>
+      </header>
+<!-- 
+
+
+      user_id = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True,) 
+      first_name = models.CharField(max_length=30, null=True, blank=True)
+      last_name = models.CharField(max_length=30, null=True, blank=True)
+      middle_name = models.CharField(max_length=30, null=True, blank=True)
+      birth_date = models.DateField(null=True, blank=True)
+      email = models.CharField(max_length=30, null=True, blank=True)
+      SEX_CHOICES = ( ('male', 'Male'), ('female', 'Female'),)
+      sex = models.CharField(max_length=10, choices=SEX_CHOICES, default='male') 
+      MARITAL_STATUS_CHOICES = ( ('married', 'Married'), ('single', 'Single'),)
+      marital_status = models.CharField(max_length=10, choices=MARITAL_STATUS_CHOICES, default='married')
+      phone = models.CharField(max_length=14, null=True, blank=True)
+      citizenship = models.CharField(max_length=30, null=True, blank=True)
+      city = models.CharField(max_length=30, null=True, blank=True) -->
+
+      <div class="form-wrap">
+        <div class="profile">
+           <h1>Регистрация</h1>
+        </div>
+        <form method="post" action="#" name="form_">
+           <div>
+              <label for="name">Имя</label>
+              <input type="text" name="name" required>
+           </div>
+           <div>
+            <label for="last_name">Фамилия</label>
+            <input type="text" name="name" required>
+         </div>
+         <div>
+            <label for="middle_name">Отчество</label>
+            <input type="text" name="name" required>
+         </div>
+         <div>
+        
+            <label for="date">Дата рождения: </label>
+            <input type="date" id="date" name="date"/>
+            
+         </div>
+
+         <div>
+            <label for="last_name">Номер телефона</label>
+            <input type="tel" name="tel" required>
+         </div>
+         
+         
+           <div class="radio">
+              <span>Пол</span>
+              <label>
+                 <input type="radio" name="sex" value="мужской">Мужской
+                 <div class="radio-control male"></div>
+              </label>
+              <label>
+                 <input type="radio" name="sex" value="женский">Женский
+                 <div class="radio-control female"></div>
+              </label>
+           </div>
+
+           <div class="radio">
+            <span>Семейное положение</span>
+            <label>
+               <input type="radio" name="sex" value="мужской">В браке
+               <div class="radio-control male"></div>
+            </label>
+            <label>
+               <input type="radio" name="sex" value="женский">Одинок
+               <div class="radio-control female"></div>
+            </label>
+         </div>
+
+           <div>
+              <label for="email">E-mail</label>
+              <input type="email" name="email" required>
+           </div>
+           <div>
+              <label for="country">Страна</label>
+              <select name="country">
+                 <option>Выберите страну проживания</option>
+                 <option value="Россия">Кыргызстан</option>
+                 <option value="Украина">Россия</option>
+                 <option value="Беларусь">Казахстан</option>
+              </select>
+              <div class="select-arrow"></div>
+              
+           </div>
+           <button type="submit">Отправить</button> 
+        </form>
+     </div>
+
+
+
+
+<footer>
+    <div class="wrapper">
+        <div class="social">
+            <p>brin team</p>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>
